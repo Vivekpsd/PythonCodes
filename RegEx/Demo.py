@@ -89,6 +89,6 @@ QUANTIFIERS
 *   - 0 or more
 +   - 1 or more
 ?   - 0 or 1
-{3} - Exact Number
-{3, 4} - Range of Numbers (Minimum, Maximum)    
+[3] - Exact Number
+[3-4] - Range of Numbers (Minimum, Maximum)    
 """
