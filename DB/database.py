@@ -4,11 +4,11 @@ conn = sqlite3.connect('test.db')
 
 print("Opened database  Successfully")
 
-# conn.execute('''
-# create table todo (id int, task text, date text, status text)
-# ''')
+conn.execute('''
+create table todos (id int, task text, date text, status text)
+''')
 
-# print("Table Created!")
+print("Table Created!")
 
 # conn.execute('''
 # insert into todo (id, task, date, status) values (3, 'Jumping', '09/12/23', 'Done');
@@ -23,12 +23,12 @@ print("Opened database  Successfully")
 
 # conn.commit()
 
-conn.execute('''
-delete from todo where id=3
-''')
-conn.commit()
+# conn.execute('''
+# delete from todo where id=3
+# ''')
+# conn.commit()
 
-result = conn.execute("select * from todo")
+result = conn.execute("select * from todos")
 
 for i in result:
     print(i)

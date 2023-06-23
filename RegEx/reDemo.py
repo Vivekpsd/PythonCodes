@@ -1,29 +1,12 @@
 import re
 
-# pattern = "\d{10}"
-pattern = "[^]"
+pattern = '[A-Z]\w+@[a-z]\w+\.[soy]+'
 
 text = '''
-abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPRSTUVWXYZ 1234567890
-Ha HaHa
-$Ha
-Meta Characters need to be escaped:
-. $ * + ? { } ( )  | \
-tomjerry.com
-321-555-4321
-123.555.1234
-123*555*1234
-(999)444-7777
-Mr. Vivek
-Mr Ankit
-Mr. V
-Mrs. Meghna
-Mrs. Shelly
-Ms Sonam
-cat mat pat bat
+CoreyMSchafer@gmail.com
 '''
 
 matches = re.findall(pattern, text)
 
-for match in matches:
-    print(match)
+if len(matches) == 0:
+    print("No")
